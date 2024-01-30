@@ -1,0 +1,1 @@
+A repository to keep track of everything i learn as a beginner in frontend web development.
