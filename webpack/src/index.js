@@ -5,7 +5,7 @@ import holberton from './assets/holberton.jpg'
 const holbertonImg = document.getElementById('holbertonimg')
 holbertonImg.src = holberton
 
+const jokeBtn = document.getElementById('jokeBtn')
+jokeBtn.addEventListener('click', generateJoke)
 
-
-console.log(generateJoke())
-console.log('welcome to the good life');
+generateJoke()
