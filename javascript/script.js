@@ -1,14 +1,30 @@
 'use strict';
 
-//when the user clicks on the purchase button, render out
-//"ooooops! Something went wrong, please try again" in the paragraph
-//that has the id="error-message"
+let firstNum = 30;
+let secondNum = 10;
+document.getElementById('first-num').textContent = firstNum;
+document.getElementById('second-num').textContent = secondNum;
+let sumTotal = document.getElementById('sum-total')
 
-let errorMessage = document.getElementById('error-message');
-
-function purchase(){
-    errorMessage.textContent = 'ooooops! Something went wrong, please try again';
+function add(){
+    let sum = firstNum + secondNum;
+    sumTotal.textContent =  "Total: " + sum;
 }
 
+function subtract(){
+    let sum = firstNum - secondNum;
+    sumTotal.textContent = "Total: " + sum;
 
+}
 
+function divide(){
+    let sum = firstNum / secondNum;
+     sumTotal.textContent = "Total: " +  sum;
+
+}
+
+function multiply(){
+    let sum = firstNum * secondNum;
+    sumTotal.textContent =  "Total: " + sum;
+
+}
