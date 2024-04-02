@@ -1,30 +1,19 @@
 'use strict';
 
-let firstNum = 30;
-let secondNum = 10;
-document.getElementById('first-num').textContent = firstNum;
-document.getElementById('second-num').textContent = secondNum;
-let sumTotal = document.getElementById('sum-total')
+//checks if a person is old enough to enter the nightclub (21)
+let age = 25;
+//ternary operator
+age >= 21 ? console.log("You can enter the nightclub") : console.log("You are too young");
 
-function add(){
-    let sum = firstNum + secondNum;
-    sumTotal.textContent =  "Total: " + sum;
+if (age >= 25){
+    console.log("You can enter");
+} else{
+    console.log("You are too young");
 }
 
-function subtract(){
-    let sum = firstNum - secondNum;
-    sumTotal.textContent = "Total: " + sum;
-
-}
-
-function divide(){
-    let sum = firstNum / secondNum;
-     sumTotal.textContent = "Total: " +  sum;
-
-}
-
-function multiply(){
-    let sum = firstNum * secondNum;
-    sumTotal.textContent =  "Total: " + sum;
-
-}
+// let age = prompt("What is your age?");
+// if (age < 25){
+//     console.log("You are not old enough to enter the nightclub!");
+// } else{
+//         console.log("You can enter");
+// }
