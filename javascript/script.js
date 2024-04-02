@@ -1,12 +1,24 @@
 'use strict';
 
-let welcomeElement = document.getElementById('welcome-message');
-let userName = 'Trevor ';
-let greeting = 'Welcome onboard';
-let message = greeting + ' ' + userName;
+let countElement = document.getElementById('counter')
+let saveElement = document.getElementById('save-data');
+let count = 0;
 
-function welcomeMessage(){
-    welcomeElement.innerText = message + '👋';
-    console.log(message);
+
+function increment(){
+    count++;
+    countElement.innerText = count;
+    console.log(count);
 }
-welcomeMessage();
+
+//a function, save(), that logs the count when it's called
+function save(){
+
+    let countStr = count + ' - ';
+    saveElement.textContent += countStr;
+    console.log(count);
+    countElement.innerText = 0;
+    count = 0;
+}
+
+
