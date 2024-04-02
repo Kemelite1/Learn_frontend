@@ -1,25 +1,28 @@
-'use strict'
+'use strict';
 
-// let countButton = document.getElementById('counter').innerText = 2;
+let jogsCompleted = 0
 
-// let firstSet = 20;
-// let secondSet = 30;
-// let count = firstSet + secondSet;
-// console.log(count);
+function jogCount(){
+    jogsCompleted++;
+    console.log(jogsCompleted);
+    return jogsCompleted;
+}
 
-//create two variables, myAge and humanDogRatio
-//multiply the two together and store the result in myDogAge
-//log myDogAge to the console
-// let myAge = 20;
-// let humanDogRatio = 7;
-// let myDogAge = myAge * humanDogRatio;
-// console.log(myDogAge);
+jogCount();
+jogCount();
+jogCount();
 
-//reassigning and incrementing
-//create a variable, bonusPoints. Initialize it as 50. Increase it to 100.
-//Decrease it down to 25, and then finally increase it to 70
-//let bonusPoints = 50;
-//bonusPoints = bonusPoints + 50;
-//bonusPoints = bonusPoints - 75;
-//bonusPoints = bonusPoints + 45;
-//console.log(bonusPoints);
+let countElement = document.getElementById('counter')
+let count = 0;
+
+function increment(){
+    count++;
+    countElement.innerText = count;
+    console.log(count);
+}
+
+//a function, save(), that logs the count when it's called
+function save(){
+    console.log(count);
+}
+
