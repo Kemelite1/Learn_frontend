@@ -1,24 +1,14 @@
 'use strict';
 
-let countElement = document.getElementById('counter')
-let saveElement = document.getElementById('save-data');
-let count = 0;
+//when the user clicks on the purchase button, render out
+//"ooooops! Something went wrong, please try again" in the paragraph
+//that has the id="error-message"
 
+let errorMessage = document.getElementById('error-message');
 
-function increment(){
-    count++;
-    countElement.innerText = count;
-    console.log(count);
+function purchase(){
+    errorMessage.textContent = 'ooooops! Something went wrong, please try again';
 }
 
-//a function, save(), that logs the count when it's called
-function save(){
-
-    let countStr = count + ' - ';
-    saveElement.textContent += countStr;
-    console.log(count);
-    countElement.innerText = 0;
-    count = 0;
-}
 
 
