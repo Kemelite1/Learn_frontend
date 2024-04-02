@@ -1,28 +1,23 @@
 'use strict';
 
-let jogsCompleted = 0
+let username = "bovi"
+let message = "You have five new notifications"
+console.log(username +"" + ", " + message + "!");
 
-function jogCount(){
-    jogsCompleted++;
-    console.log(jogsCompleted);
-    return jogsCompleted;
-}
+let messageToUser = username + ", " + message + "!"
+console.log(messageToUser);
 
-jogCount();
-jogCount();
-jogCount();
+let myName = 'Trevor Job';
+let greeting = 'Hello, my name is';
 
-let countElement = document.getElementById('counter')
-let count = 0;
+let myGreeting = greeting + ' ' + myName + '.';
+console.log(myGreeting);
 
-function increment(){
-    count++;
-    countElement.innerText = count;
-    console.log(count);
-}
 
-//a function, save(), that logs the count when it's called
-function save(){
-    console.log(count);
-}
+console.log(10 + 10); //20 - number
+console.log("10" + 10); //1010 - string
+console.log(20 + "10"); //2010 - string
+
+
+
 
