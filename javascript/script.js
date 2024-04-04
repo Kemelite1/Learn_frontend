@@ -1,19 +1,12 @@
 'use strict';
 
-let appleShelf = document.getElementById('apples');
-let bananaShelf = document.getElementById('bananas');
+//a chrome extension
 
-let fruits = ['🍊', '🍌', '🍊', '🍌'];
+let inputElement = document.getElementById('input-field');
+let inputButton = document.getElementById('save-btn');
+let myLeads = [];
 
-function arrangeFruits(){
-    for (let i = 0; i < fruits.length; i++){
-        if (fruits[i] === '🍊'){
-            appleShelf.textContent += fruits[i];
-        } else if (fruits[i] === '🍌'){
-            bananaShelf.textContent += fruits[i];
-        }
-    }
-}
-
-// Call the function to arrange fruits
-arrangeFruits();
+    inputButton.addEventListener('click', () => {
+        myLeads.push(inputElement.value);
+        console.log(myLeads);
+    })
