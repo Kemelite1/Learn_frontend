@@ -7,16 +7,14 @@
     <title>Hello JavaScript</title>
 </head>
 <body>
-<div class="h-screen bg-black flex flex-col items-center justify-center gap-2">
-    <h1 class="text-green-300 font-bold text-2xl">BlackJack</h1>
-    <p id="message-paragraph" class="text-white">Want to play a round?</p>
-    <p id="cards-paragraph" class="text-white">Cards:</p>
-    <p id="sum-paragraph" class="text-white">Sum:</p>
-    <button class="text-white bg-green-300 font-bold px-2 p-1 mt-5 rounded cursor-pointer" onclick="startGame()">START</button>
-    <button class="text-white bg-green-300 font-bold px-2 p-1 mt-5 rounded cursor-pointer" onclick="newCard()">New Card</button>    
+<div class="h-screen flex flex-col items-center justify-center gap-2">
+    <div id="apples" class="bg-green-400 w-full text-center"></div>
+    <div id="bananas" class="bg-yellow-300 w-full text-center"></div>
+    
     
 </div>
 
+    <!-- <script src="arrays.js"></script> -->
     <script src="script.js"></script>
 </body>
 </html>
