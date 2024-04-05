@@ -3,10 +3,16 @@
 //a chrome extension
 
 let inputElement = document.getElementById('input-field');
-let inputButton = document.getElementById('save-btn');
+let saveButton = document.getElementById('save-btn');
+let listItems = document.getElementById('list-items')
 let myLeads = [];
 
-    inputButton.addEventListener('click', () => {
+    saveButton.addEventListener('click', () => {
         myLeads.push(inputElement.value);
-        console.log(myLeads);
-    })
+        for (let i = 0; i < myLeads.length; i++) {
+            listItems.innerHTML += `<li>${myLeads[i]}</li>`;
+        }
+
+        })
+
+        
