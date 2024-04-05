@@ -10,7 +10,10 @@ let myLeads = [];
     saveButton.addEventListener('click', () => {
         myLeads.push(inputElement.value);
         for (let i = 0; i < myLeads.length; i++) {
-            listItems.innerHTML += `<li>${myLeads[i]}</li>`;
+            const li = document.createElement('li');
+            li.textContent = myLeads[i];
+            listItems.appendChild(li);
+            // listItems.innerHTML += `<li>${myLeads[i]}</li>`;
         }
 
         })
