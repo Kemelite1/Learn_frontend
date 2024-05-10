@@ -9,13 +9,79 @@
 <body>
     <!-- The navbar -->
     <nav>
-        <ul class="topbar">
+        <ul class="topbar" id="dropdown-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li class="rightbar"><a href="signup.html">Sign Up</a></li>
             <li class="rightbar"><a href="login.html">Login</a></li>
 
+            <li class="dropdown"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776</a></li>
         </ul>
+    </nav>
+
+
+    <!-- The main content -->
+    <main>
+
+        <div class="container" id="gradient-1">
+
+            <div class="row">
+                <div class="col-6">
+
+                    <div class="left-col">
+                        <h1 class="big">Front-end.</h1>
+                        <h1 class="big">User interfaces.</h1>
+                    </div>
+
+                    <form action="">
+
+                        <div class="left-col">
+
+                            <h2>Email</h2>
+                            <input class="inputbox" type="text" name="email"  placeholder="Email">
+                            <h2>Password</h2>
+                            <input class="inputbox" type="text" name="password"  placeholder="Password">
+
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="col-6">
+
+                    <div class="right-col">
+                        <iframe width="560" height="315"
+                         src="https://www.youtube.com/embed/zJSY8tbf_ys?si=qJDf7W-gFBsz62Qo"
+                          title="YouTube video player" 
+                          frameborder="0" allow="accelerometer;
+                           autoplay; clipboard-write; encrypted-media;
+                            gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        
+
+
+    </main>
+
+    <script>
+        // The dropdown menu
+        function dropdownMenu(){
+            let i = document.getElementById("dropdown-menu");
+            if(i.className === "topbar"){
+                i.className += " responsive";
+        }
+        else{
+            i.className = "topbar";
+        }
+    }
+    </script>
 </body>
+
 </html>
