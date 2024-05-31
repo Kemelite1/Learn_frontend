@@ -1,13 +1,20 @@
-let title = document.querySelector('#heading');
-let listItems = document.querySelectorAll('.list-items');
+//create element
+let unorderedList = document.querySelector('ul');
+let Items = document.createElement('li');
 
+//adding element
+unorderedList.append(Items);
 
-title.style.backgroundColor = 'orange';
+//modify text
+Items.innerText = 'Grey Anatomy';
 
-// for (let i = 0; i < listItems.length; i++) {
-//     listItems[i].style.color = 'red';
-// }
+//modifying classes and sttributes
+Items.classList.add('list-items');
+Items.classList.remove('list-items');
+Items.setAttribute('class', 'list-items');
+Items.removeAttribute('class');
 
-listItems.forEach(item => {
-    item.style.color = 'red';
-});
+console.log(Items.classList.contains('list-items'));
+
+//remove element
+Items.remove();
