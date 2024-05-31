@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #458932;
+    color: #333;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.container {
+    text-align: center;
+    border: .5rem solid gray;
+    width: 60%;
+    height: 55vh;
+    margin: 20rem;
+    padding: 3rem;
+}
+
+.container h1{
+    color: white;
+}
+
+.container ul{
+    list-style: none;
+}
+
+.container ul .list-items{
+    background-color: aliceblue;
+    padding: .5rem;
+    margin: .5rem;
+}
