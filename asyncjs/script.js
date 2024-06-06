@@ -34,12 +34,24 @@ let createPost = (post) => {
 // .then(getPosts)
 // .catch(err => console.log(err));
 
-// Promise.all
-const promise1 = Promise.resolve('Software Engineering');
-const promise2 = 10;
-const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'Artificial Intelligence'));
 
-const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
+// Async / Await
 
+async function init(){
+    await createPost({title: 'Post Three', body: 'Web development and App development'});
+    getPosts();
+}
 
-Promise.all([promise1, promise2, promise3, promise4]).then((values) => console.log(values));
+init();
+
+// Async / Await with fetch
+
+async function fetchUsers(){
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    const data = await res.json();
+
+    console.log(data);
+}
+
+fetchUsers();
