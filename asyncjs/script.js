@@ -30,6 +30,12 @@ let createPost = (post) => {
     })
 };
 
-createPost({title: 'Post Three', body: 'Web development and App development'})
-.then(getPosts)
-.catch(err => console.log(err));
+// createPost({title: 'Post Three', body: 'Web development and App development'})
+// .then(getPosts)
+// .catch(err => console.log(err));
+
+// Promise.all
+const promise1 = Promise.resolve('Software Engineering');
+const promise2 = 10;
+const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'Artificial Intelligence'));
+Promise.all([promise1, promise2, promise3]).then((values) => console.log(values));
