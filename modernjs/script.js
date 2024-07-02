@@ -1,19 +1,20 @@
-//console.table({Name: 'Bovi', Email: 'bovin@yahoo.com', Age: 25, Gender: 'Male',});
+// Different ways to declare a variable
+let fname = 'Trevor';
+// reassigning a variable
+fname = 'George';
 
-/* console.group('Avengers');
-console.log('The Avengers');
-console.log('Age of Ultron');
-console.log('Civil War');
-console.log('Infinity War');
-console.log('End Game');
-console.groupEnd();
-*/
+let firstName;
+// assigning a variable
+firstName = 'Trevor';
+console.log(firstName);
+// Output: Trevor
 
-// const styles = `
-//     padding: 10px;
-//     background-color: white;
-//     color: black;
-//     font-weight: bold;
-// `;
+// Declaring multiple variables
+let club, city, country;
+club = 'Real Madrid';
+city = 'Madrid';
+country = 'Spain';
+console.log(club, city, country);
 
-// console.log('%cHello JavaScript', styles);
+// Declaring a constant variable
+const lastName = 'Trevor';
