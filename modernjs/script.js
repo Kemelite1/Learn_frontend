@@ -1,24 +1,34 @@
-//type conversion
+const string = 'software engineer';
 
-//string to number
-let score = '100';
-score = +score;
-score = Number(score);
-score = parseInt(score);
-console.log(score, typeof score);
+check = string.__proto__;
 
-//string to decimal
-let decimal = '22.3';
-decimal = parseFloat(decimal);
-console.log(decimal, typeof decimal);
+check = string.charAt(3);
 
-//number to string
-let number = 100;
-number = number.toString();
-number = String(number);
-console.log(number, typeof number);
+check = string.substring(0, 5);
 
-//number to boolean
-let bool = 0; //0 is false, 1 is true
-bool = Boolean(bool);
-console.log(bool, typeof bool);
+check = string.slice(-5);
+
+check = string.split(' ');
+
+check = string.replace('software', 'web');
+
+check = string.includes('engineer');
+
+check = string.indexOf('e');
+
+check = string.toUpperCase();
+
+console.log(check);
+
+//string task
+const task = 'engineer';
+ result = task.charAt(0).toUpperCase() + task.slice(1);
+console.log(result);
+//string task
+const task2 = 'frontend developer';
+ result2 = task2.charAt(0).toUpperCase() + task2.substring(1);
+console.log(result2);
+
+const task3 = 'backend developer';
+ result3 = task3[0].toUpperCase() + task3.substring(1);
+console.log(result3);
