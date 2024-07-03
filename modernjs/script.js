@@ -1,34 +1,22 @@
-const string = 'software engineer';
+// numbers
+let num = 5.7863;
+n = num.toFixed(2) // 5.79
+n = num.toPrecision(2); // 5.8
+n = Math.round(num); // 6
+n = Math.floor(num); // 5
+n = Math.ceil(num); // 6
+n = Math.random(); // random number between 0 and 1
+n = Math.random() * 10; // random number between 0 and 10
+n = Math.floor(Math.random() * 10); // random number between 0 and 9
+console.log(n);
 
-check = string.__proto__;
 
-check = string.charAt(3);
-
-check = string.substring(0, 5);
-
-check = string.slice(-5);
-
-check = string.split(' ');
-
-check = string.replace('software', 'web');
-
-check = string.includes('engineer');
-
-check = string.indexOf('e');
-
-check = string.toUpperCase();
-
-console.log(check);
-
-//string task
-const task = 'engineer';
- result = task.charAt(0).toUpperCase() + task.slice(1);
-console.log(result);
-//string task
-const task2 = 'frontend developer';
- result2 = task2.charAt(0).toUpperCase() + task2.substring(1);
-console.log(result2);
-
-const task3 = 'backend developer';
- result3 = task3[0].toUpperCase() + task3.substring(1);
-console.log(result3);
+ let x = Math.floor(Math.random() * 100) + 1;
+ let y = Math.floor(Math.random() * 50) + 1;
+ //create a varibale for the sum, difference, product, and quotient of x and y
+ //log the output in a string that shows the the two numbers of x and y with the operaor and result
+ console.log(`The sum of ${x} and ${y} is ${x + y}`);
+ console.log(`The difference of ${x} and ${y} is ${x - y}`);
+ console.log(`The product of ${x} and ${y} is ${x * y}`);
+ console.log(`The quotient of ${x} and ${y} is ${x / y}`);
+ console.log(`The remainder of ${x} and ${y} is ${x % y}`);
