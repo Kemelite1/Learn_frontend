@@ -1,62 +1,33 @@
-//Object - a data strcture that holds key value pairs
-//stores multiple values in a variable
-
+//naming objects
+//if the value and variable have the same name, you can use the short hand notation to name them
+const name = 'Trevor';
+const age = 20;
 const person = {
-    name: 'Trevor Job',
-    age: 30,
-    city: 'New York',
-    isEmployed: true,
-    hobbies: ['music', 'movies', 'sports'],
-    //nested object
-    address: {
-        street: '50 main st',
-        city: 'Boston',
-        state: 'MA'
-    },
-    //function within an object
-    greet() {
-        console.log(`Hello, my name is ${this.name}`);
-    }
-}
-
-//Accessing values
-x = person.name;
-x = person['age'];
-x = person.hobbies[0];
-
-//Adding properties
-person.email = 'trevor@mail.com';
-
-//Changing properties
-person.age = 31;
-
-//Deleting properties
-delete person.city;
-
-//Accessing nested objects
-x = person.address.city;
-
-person.greet();
+    name,
+    age
+};
 //console.log(person);
-//console.log(x);
 
-//spread operator
-const person2 = {...person, name: 'Becky Jonas', age: 25};
-//console.log(person2);
+//destructuring objects
+const user = {
+    id: 1,
+    firstName: 'Trevor',
+    userName: 'job22',
+    city: 'New York',
+    favoriteFood: 'Jollof Rice',
+    favoriteMovie: 'The Shawshank Redemption',
+    countriesVisited: {
+        country1: 'France',
+        country2: 'Germany',
+        country3: 'Italy'
+    }
 
-//assign
-const person3 = Object.assign({}, person);
-//console.log(person3);
-//get all keys
-const keys = Object.keys(person);
-//console.log(keys);
-//get all values
-const values = Object.values(person);
-//console.log(values);
-//get all key value pairs
-const entries = Object.entries(person);
-//get length of object
-//console.log(keys.length);
-//hasproperty
-x = person.hasOwnProperty('name');
-//console.log(x);
+    }
+
+const { firstName: fullName, userName, countriesVisited: { country1} } = user;
+console.log(fullName, userName, country1);
+
+//destructuring arrays
+const numbers = [1, 2, 3, 4, 5];
+const [first, second, third, ...rest] = numbers;
+console.log(first, second, third, rest);
