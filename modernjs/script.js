@@ -1,33 +1,65 @@
-//naming objects
-//if the value and variable have the same name, you can use the short hand notation to name them
-const name = 'Trevor';
-const age = 20;
-const person = {
-    name,
-    age
-};
-//console.log(person);
+//json - javascript object notation - storing data in human readable format
 
-//destructuring objects
-const user = {
-    id: 1,
-    firstName: 'Trevor',
-    userName: 'job22',
-    city: 'New York',
-    favoriteFood: 'Jollof Rice',
-    favoriteMovie: 'The Shawshank Redemption',
-    countriesVisited: {
-        country1: 'France',
-        country2: 'Germany',
-        country3: 'Italy'
+   const books = {
+        "title": "The gods are not to be blamed",
+        "author": "Trevore",
+        "price": 10.99
     }
+    //console.log(books);
 
-    }
+    //stringify - convert object to JSON string
+    const bookJSON = JSON.stringify(books);
+    console.log(bookJSON);
 
-const { firstName: fullName, userName, countriesVisited: { country1} } = user;
-console.log(fullName, userName, country1);
+    //parse - convert JSON string to object
+    const bookObject = JSON.parse(bookJSON);
+    //console.log(bookObject);
+    console.log(bookObject.author);
 
-//destructuring arrays
-const numbers = [1, 2, 3, 4, 5];
-const [first, second, third, ...rest] = numbers;
-console.log(first, second, third, rest);
+//task
+const library = [
+    {
+        title: "The Odyssey",
+        author: "Homer",
+        status: {
+            own: true,
+            reading: false,
+            read: false
+        }
+    },
+
+    {
+        title: "The Iliad",
+        author: "Homer",
+        status: {
+            own: true,
+            reading: false,
+            read: false
+        }
+    },
+    {
+        title: "Twilight",
+        author: "Stephenie",
+        status: {
+            own: true,
+            reading: false,
+            read: false
+        }
+    },
+
+]
+console.log(library);
+
+//change read value for all
+x = library[0].status.read = true;
+x = library[1].status.read = true;
+x = library[2].status.read = true;
+console.log(x);
+
+//destructure and rename
+const { title: firstBook } = library[0];
+console.log(firstBook);
+
+//json string
+const jsonLibrary = JSON.stringify(library);
+console.log(jsonLibrary);
