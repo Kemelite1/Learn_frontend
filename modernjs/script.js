@@ -1,65 +1,41 @@
-//json - javascript object notation - storing data in human readable format
+//functions - A way to group code together.
+//Multiple ways to create a function
 
-   const books = {
-        "title": "The gods are not to be blamed",
-        "author": "Trevore",
-        "price": 10.99
+function greeting(name, seat){
+    console.log(`Hello ${name}! You are seated at ${seat}.`)
+
+}
+greeting('Bovi', 12);
+
+//default parameters
+function regUser(user = 'Bovi'){
+    return `Hello ${user}`;
+
+}
+console.log(regUser())
+
+//Rest parameter
+function sum(...nums){
+    let total = 0;
+    for(const num of nums){
+        total += num;
     }
-    //console.log(books);
+    return total;
+}
+console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
-    //stringify - convert object to JSON string
-    const bookJSON = JSON.stringify(books);
-    console.log(bookJSON);
+//objects as parameters
+function person(name, age){
+    return `Hello ${name}, you are ${age} years old.`
+}
+let user = {name: 'Bovi', age: 30};
+console.log(person(user.name, user.age));
+console.log(person('Maggie', 25));
 
-    //parse - convert JSON string to object
-    const bookObject = JSON.parse(bookJSON);
-    //console.log(bookObject);
-    console.log(bookObject.author);
-
-//task
-const library = [
-    {
-        title: "The Odyssey",
-        author: "Homer",
-        status: {
-            own: true,
-            reading: false,
-            read: false
-        }
-    },
-
-    {
-        title: "The Iliad",
-        author: "Homer",
-        status: {
-            own: true,
-            reading: false,
-            read: false
-        }
-    },
-    {
-        title: "Twilight",
-        author: "Stephenie",
-        status: {
-            own: true,
-            reading: false,
-            read: false
-        }
-    },
-
-]
-console.log(library);
-
-//change read value for all
-x = library[0].status.read = true;
-x = library[1].status.read = true;
-x = library[2].status.read = true;
-console.log(x);
-
-//destructure and rename
-const { title: firstBook } = library[0];
-console.log(firstBook);
-
-//json string
-const jsonLibrary = JSON.stringify(library);
-console.log(jsonLibrary);
+//arrays as parameters
+function getRandom(arr){
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    let item =  arr[randomIndex];
+    console.log(item);
+}
+getRandom([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
